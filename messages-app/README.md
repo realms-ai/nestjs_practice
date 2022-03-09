@@ -17,7 +17,7 @@ This branch will help us know how to setup a project with nest cli (Generator)
 
 3. App Architecture
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://i.ibb.co/nCChCDq/stack-architecture.png" width="320" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://i.ibb.co/nCChCDq/stack-architecture.png" width="960" alt="Nest Logo" /></a>
 </p>
 
 
