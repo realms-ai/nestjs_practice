@@ -12,6 +12,12 @@ export class AppController {
         return 'Hi There!';
     }
 
+    // Route is /bye here 
+    @Get('bye')
+    getByeThere() {
+        return "Bye There!"
+    }
+
 }
 
 // Decorators help us to write the routes
