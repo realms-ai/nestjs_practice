@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
+import { AppController, NewController } from "./app.controller";
 
 // Module helps to create instance of classes defined e.g. Controllers, Services and so on
 @Module({
-    controllers: [AppController]
+    controllers: [AppController, NewController]
 })
 export class AppModule {
 

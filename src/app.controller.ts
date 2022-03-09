@@ -13,3 +13,15 @@ export class AppController {
     }
 
 }
+
+// Decorators help us to write the routes
+// e.g. /app/test route will now display this result
+// In here 'app' will work as namespace
+// 'test' will work as a end route
+@Controller('app')
+export class NewController {
+    @Get('test')
+    getRootRoute() {
+        return "Hi There!!! Testing in Progress"
+    }
+}
