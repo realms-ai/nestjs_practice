@@ -9,8 +9,10 @@
 1. Pipe: Used to validate data contained in request
 2. Guard: Used to authenticate user
 3. Controller: User to route request to particular function
-4. Service: Run some business logic
+4. Service: Run some business logic and handles data access
 5. Repository: Access a database
 6. Modules: Groups together code
 7. Filters: Handles error that occur during request handling
 8. Interceptors: Adds extra logic to incoming requests or outgoing requests
+
+### Controller and Module are barebone of the application
