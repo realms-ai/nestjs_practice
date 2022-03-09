@@ -1,5 +1,11 @@
 # nestjs_practice# nestj
 
+## How to run the application
+```
+    npx ts-node-dev src/main.ts
+```
+We use this command as we built the app from scratch. There are certain generators to build app with single commands
+
 ## Initialize NestJs project
 ```
     npm install @nestjs/common@7.6.17 @nestjs/core@7.6.17 @nestjs/platform-express@7.6.17 reflect-metadata@0.1.13 typescript@4.3.2
