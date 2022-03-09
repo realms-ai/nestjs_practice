@@ -25,14 +25,3 @@ We use this command as we built the app from scratch. There are certain generato
 8. Interceptors: Adds extra logic to incoming requests or outgoing requests
 
 Controllers and Modules are barebone of the application
-
-
-# Messages App
-
-## Branch steps/2_nest_cli
-This branch will help us know how to setup a project with nest cli (Generator)
-
-## Create a new Project named **messages** with Nest CLI
-```
-    nest new messages_app
-```
