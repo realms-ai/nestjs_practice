@@ -30,11 +30,12 @@ switch (process.env.NODE_ENV) {
   case 'production':
     Object.assign(dbConfig, {
       type: 'postgres',
-      host: 'localhost',
-      port: 5433,
-      database: 'nest_testing',
-      username: 'postgres',
-      password: 'password',
+      url: process.env.DATABASE_URL,
+      migrationsRun: true,
+      entities: ['**/*.entity.js'],
+      ssl: {
+        rejectUnauthorized: false
+      }
     })
     break
   default: 
