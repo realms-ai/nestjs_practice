@@ -18,7 +18,7 @@ const cookieSession = require('cookie-session')
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: `.env.${process.env.NODE_ENV}`
+      envFilePath: '.env' || `.env.${process.env.NODE_ENV}`
     }),
     TypeOrmModule.forRoot(),
     // TypeOrmModule.forRootAsync({
@@ -64,7 +64,7 @@ export class AppModule {
   configure(consumer: MiddlewareConsumer){
     consumer.apply(
       cookieSession({
-        keys: [this.configService.get('COOKIE_KEY')], // Go for strong keys to encrypt cookies data
+        keys: [process.env.COOKIE_KEY || this.configService.get('COOKIE_KEY')], // Go for strong keys to encrypt cookies data
       })
     )
     .forRoutes('*')

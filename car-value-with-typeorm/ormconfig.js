@@ -11,7 +11,7 @@ switch (process.env.NODE_ENV) {
   case 'development':
     Object.assign(dbConfig, {
       type: 'sqlite',
-      database: 'db1.sqlite',
+      database: 'db.sqlite',
       synchronize: false,
       entities: ['**/*.entity.js'],
       logging: true,
