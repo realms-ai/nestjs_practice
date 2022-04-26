@@ -45,3 +45,9 @@ This branch will help us know how to architect the nest app with typeorm
     yarn add @nestjs/config
     yarn add cross-env
   ```
+
+9. Moving from synchonization to migrations
+  - Setting up the configuration in js file (Things don't work in other types of files)
+  ```
+    npm install -g ts-node
+  ```

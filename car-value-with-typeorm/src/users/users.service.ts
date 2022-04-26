@@ -31,6 +31,13 @@ export class UsersService {
         return user
     }
 
+    async currentUser(id: number) {
+        if(!id)
+            return null
+        const user = await this.user.findOne(id)
+        return user
+    }
+
     async update(id: number, params: Partial<User>) {
         const user = await this.user.findOne(id)
         if (!user) {

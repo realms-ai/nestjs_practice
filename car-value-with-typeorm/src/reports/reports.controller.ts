@@ -1,10 +1,10 @@
 import { Body, ClassSerializerInterceptor, Controller, Get, Param, Patch, Post, Query, UseGuards, UseInterceptors } from '@nestjs/common';
-import { AdminGuard } from 'src/guards/admin.guard';
-import { AuthGuard } from 'src/guards/auth.guard';
-import { Serialize } from 'src/interceptors/serializer.interceptor';
-import { CurrentUser } from 'src/users/decorators/current-user.decorator';
-import { CurrentUserInterceptor } from 'src/users/interceptors/current-user.interceptor';
-import { User } from 'src/users/user.entity';
+import { AdminGuard } from '../guards/admin.guard';
+import { AuthGuard } from '../guards/auth.guard';
+import { Serialize } from '../interceptors/serializer.interceptor';
+import { CurrentUser } from '../users/decorators/current-user.decorator';
+import { CurrentUserInterceptor } from '../users/interceptors/current-user.interceptor';
+import { User } from '../users/user.entity';
 import { ApprovedReportDto } from './dtos/approved-report.dto';
 import { CreateReportDto } from './dtos/create-report.dto';
 import { GetEstimateDto } from './dtos/get-estimate.dto';
