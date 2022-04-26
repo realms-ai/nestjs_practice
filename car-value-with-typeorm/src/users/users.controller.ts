@@ -6,7 +6,7 @@ import { UsersService } from './users.service';
 
 @Controller('users')
 // Controller wide serialization
-@Serialize(UserDto)
+// @Serialize(UserDto)
 export class UsersController {
     constructor(private usersService: UsersService){}
 
@@ -17,7 +17,7 @@ export class UsersController {
         return this.usersService.find(email)
     }
 
-    //  /users/:id => Get a single user
+    // /users/:id => Get a single user
     // @UseInterceptors(new SerializerInterceptor(UserDto))
     // Wrapping the interceptor in custom decorator
     // @Serialize(UserDto)

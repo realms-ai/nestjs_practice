@@ -1,12 +1,16 @@
 import { Exclude } from "class-transformer";
 import { IsEmail, IsNotEmpty } from "class-validator";
-import { AfterInsert, AfterRemove, AfterUpdate, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Report } from "src/reports/report.entity";
+import { AfterInsert, AfterRemove, AfterUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
-    id: BigInteger;
+    id: number;
+    
+    @Column({ default: false })
+    admin: boolean;
 
     @Column({ unique: true })
     @IsEmail({}, { message: 'Incorrect email format' })
@@ -17,6 +21,12 @@ export class User {
     @Exclude()
     @IsNotEmpty({ message: 'Password is required' })
     password: string;
+
+    @OneToMany(() => Report, report => report.owner)
+    reports: Report[]
+
+    @OneToMany(() => Report, report => report.approver)
+    approvedReports: Report[]
 
     @AfterInsert()
     logInsert() {

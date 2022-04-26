@@ -17,7 +17,7 @@ export class AppService {
   async signup(email: string, password: string) {
     // See if email is in use
     const users = await this.userService.find(email)
-    if(users.length) {
+    if(users.length > 0) {
       throw new BadRequestException("Email already taken.")
     }
 

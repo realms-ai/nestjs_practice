@@ -12,7 +12,7 @@ import { UsersService } from './users/users.service';
 // Use this controller to handle SESSIONS
 @Serialize(UserDto)
 @Controller()
-@UseInterceptors(CurrentUserInterceptor)
+// @UseInterceptors(CurrentUserInterceptor)
 export class AppController {
   constructor(private readonly appService: AppService, private usersService: UsersService) {}
 
